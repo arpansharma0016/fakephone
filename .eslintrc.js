@@ -32,5 +32,6 @@ module.exports = {
     ServiceConfiguration: 'readonly',
     DateTime: 'writable',
     cordova: 'readonly',
+    universalLinks: 'readonly',
   },
 };

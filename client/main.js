@@ -3,11 +3,9 @@ import {DateTime as luxon} from 'luxon';
 import VueRouter from 'vue-router';
 import '../imports/client/plugins/index';
 import '../imports/client/mixins/index';
-import '../imports/client/components/index';
 import App from '../imports/client/App.vue';
 import router from '../imports/client/router';
 import vuetify from '../imports/client/plugins/vuetify';
-import 'swiper/swiper-bundle.min.css';
 
 DateTime = luxon;
 Meteor.startup(() => {

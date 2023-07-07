@@ -1,11 +1,12 @@
 /* eslint-disable no-undef */
+
 App.info({
-  id: 'com.meteorapp.agrisquad',
-  name: 'AgriSquad',
-  description: 'Agricultural Super App made for Meteor Hackathon by Team fasalians',
-  author: 'Team Fasalians',
+  id: 'com.meteorapp.test',
+  name: 'test',
+  description: 'Simple Vue2 + Meteor Project',
+  author: 'Partha ROy',
   email: 'partha.roy@wolkus.com',
-  website: 'https://agrisquad.meteorapp.com',
+  website: 'https://test.meteorapp.com',
 });
 
 App.icons({
@@ -36,16 +37,6 @@ App.accessRule('*.google.com/*');
 App.accessRule('*.googleapis.com/*');
 App.accessRule('*.gstatic.com/*');
 
-App.appendToConfig(`<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
-    <string>need camera access to take pictures</string>
-</edit-config><edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-    <string>need photo library access to get pictures from there</string>
-</edit-config><edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
-    <string>need location access to find things nearby</string>
-</edit-config><edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
-    <string>need photo library access to save pictures there</string>
-</edit-config>`);
-
 App.appendToConfig(`
   <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
     <application android:usesCleartextTraffic="true"></application>
@@ -54,7 +45,7 @@ App.appendToConfig(`
 
 App.appendToConfig(`
   <universal-links>
-    <host name="agrisquad.meteorapp.com" scheme="https">
+    <host name="test.meteorapp.com" scheme="https">
       <path event="sharePost" url="/post/*" />
     </host>
   </universal-links>

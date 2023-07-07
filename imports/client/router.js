@@ -4,85 +4,8 @@ const router = new VueRouter({
   base: '/',
   routes: [
     {
-      path: '/',
-      redirect() {
-        if (Meteor.userId()) return {name: 'dashboard'};
-        return {name: 'login'};
-        // return {name: 'forum'};
-      },
-    },
-
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('./pages/login/index.vue'),
-      beforeEnter: (_, _1, next) => {
-        if (Meteor.userId()) next({name: 'dashboard', replace: true});
-        else next();
-      },
-    },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: () => import('./pages/dashboard/index.vue'),
-      meta: {
-        requiresAuth: true,
-      },
-    },
-    {
-      path: '*',
-      name: 'notFound',
-      component: () => import('./pages/404/index.vue'),
-    },
-    {
-      path: '/onboarding',
-      name: 'onboarding',
-      component: () => import('./pages/onboarding/index.vue'),
-      meta: {
-        requiresAuth: true,
-      },
-    },
-    {
-      path: '/profile',
-      name: 'profile',
-      component: () => import('./pages/profile/index.vue'),
-      meta: {
-        requiresAuth: true,
-      },
-    },
-    {
-      path: '/edit-profile',
-      name: 'editProfile',
-      component: () => import('./pages/editProfile/index.vue'),
-      meta: {
-        requiresAuth: true,
-      },
-    },
-
-
-    {
-      path: '/digest-form',
-      name: 'digest-form',
-      component: () => import('./pages/digest/dailyDigestForm.vue'),
-      meta: {
-        requiresAuth: false,
-      },
-    },
-    {
-      path: '/content-moderation',
-      name: 'contentModeration',
-      component: () => import('./pages/contentModeration/index.vue'),
-      meta: {
-        requiresAuth: true,
-      },
-    },
-    {
-      path: '/digest',
-      name: 'digestContent',
-      component: () => import('./pages/dailyDigest/index.vue'),
-      meta: {
-        requiresAuth: false,
-      },
+      path: '/home',
+      component: () => import('./pages/home/index.vue'),
     },
   ],
   mode: 'history',
